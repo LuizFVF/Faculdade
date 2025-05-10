@@ -6,7 +6,8 @@ int main(){
     char nomecid1[20], nomecid2[20];   //declaração nome de cidade com 10 caracteres
     int pop1, pop2; //declaração vareiável população 1 e 2
     float area1, area2, pib1, pib2;  //declaração vareiável da area e pib carta 1 e 2
-    int pt1, pt2;  //declaração vareiável pontos turisticos 1 e 2 
+    int pt1, pt2;  //declaração vareiável pontos turisticos 1 e 2
+    float dens1, dens2, pibper1, pibper2; //declaração denidade e pib per capita 
 
     //leitura de dados 
 
@@ -42,7 +43,11 @@ int main(){
     printf("Entre com a quantidade de pontos turisticos:\n");
     scanf(" %d", &pt2);
 
+    dens1 = pop1/area1; //divisão normal
+    dens2 = pop2/area2; //divisão normal
 
+    pibper1 = (float)pib1/pop1; //divisão e conversão em float explicita
+    pibper2 = (float)pib2/pop2; //divisão e conversão em float ecplicita
 
     //impressao de dados
 
@@ -54,6 +59,8 @@ int main(){
     printf("Tamanho da area:%.2f\n", area1);
     printf("PIB:%.2f\n", pib1);
     printf("Numero de pontos Turisticos:%d\n", pt1);
+    printf("Densidade populacional:%.2f\n", dens1);
+    printf("PIB per Capita:%.2f\n\n", pibper1);
 
     printf("Carta 2\n");
     printf("Estado: %c\n", estd2);
@@ -62,7 +69,9 @@ int main(){
     printf("Numero da populacao:%d\n", pop2);
     printf("Tamanho da area:%.2f\n", area2);
     printf("PIB:%.2f\n", pib2);
-    printf("Numero de pontos Turisticos:%d\n", pt2);    
+    printf("Numero de pontos Turisticos:%d\n", pt2); 
+    printf("Densidade populacional:%.2f\n", dens2);
+    printf("PIB per Capita:%.2f\n\n", pibper2);       
 
     return 0;
 }
